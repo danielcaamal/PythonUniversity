@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Person: {{ person.first_name  }} {{ person.last_name }}</title>
+</head>
+<body>
+    <div>Id: {{person.id}} </div>
+    <div>First Name: {{person.first_name}} </div>
+    <div>Last Name: {{person.last_name}} </div>
+    <div>Email: {{person.email}} </div>
+    <div>Address: {{person.address}} </div>
+    <a href="{% url 'index' %}">Back to menu</a>
+</body>
+</html>
