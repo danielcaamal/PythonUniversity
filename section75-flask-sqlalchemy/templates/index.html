@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="text-align: center;">SAP LIST</h1>
+    <div>
+        Total: {{ total }}
+    </div>
+    <div>
+        <a href="/add">Add Person</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Show Detail</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                {% for person in people %}
+                    <tr>
+                        <td>{{person.id}}</td> 
+                        <td>{{person.first_name}}</td> 
+                        <td>{{person.last_name}}</td> 
+                        <td>{{person.email}}</td> 
+                        <td><a href="/show/{{person.id}}">Show</a></td>
+                        <td><a href="/edit/{{person.id}}">Edit</a></td>
+                        <td><a href="/delete/{{person.id}}">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+</body>
+</html>
